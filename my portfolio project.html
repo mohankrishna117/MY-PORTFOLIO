@@ -1,70 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY RESUME</title>
-    <style>
-        body{
-            background-color: rgb(0, 0, 0);
-            text-align: left;
-        }
-        header{
-            text-align: center;
-            color: rgb(253, 253, 253);
-            background-color:rgb(33, 52, 78);
-            padding: 40px 0;
-        }
-        nav a{
-            text-align: center;
-            font-weight: bold;
-            color: rgb(164, 218, 243);
-            margin: 0 20px;
-            text-decoration: none;
-        }
-        button{
-            background-color: blanchedalmond;
-            color:rgb(21, 48, 128);
-            border:none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .project_imag{
-            width:200px;
-            height:200px;
-            padding: 10px 120px;
-        }
-        .skill_imag{
-            width: 200px;
-            height: 200px;
-            text-align: left;
-            padding: 10px 120px;
-        }
-        .about_imag{
-            width: 200px;
-            height:200px;
-            padding: 10px 120px;
-        }
-        .buttons{
-            margin: 20px 0;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ommi Mohan Krishna - Portfolio</title>
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0b476f, #ffffff); /* light blue → white */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(to right, #1175b7, #84a8af); /* Indigo → Purple */
+  color: #fff;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #d1d5db; /* light gray hover */
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.p {
+  color: #000000;
+}
+
+h2 {
+  color: #1a1919; /* deep navy for headings */
+  margin-bottom: 20px;
+}
+
+.projects, .skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* subtle hover effect */
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb; /* bright blue */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e40af; /* darker blue on hover */
+}
+
+footer {
+  text-align: center;
+  background:#84a8af;
+  color: #fff;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+</style>
 </head>
 <body>
-    <header>
-    <h1>MOHAN KRISHNA</h1>
-    <h3>...- ..  ...  ..  ---  -.  .-  .-.  -.--</h3>
-    </header>
+<header>
+  <div class="header-content">
+    <h1 class="slide-left">Ommi Mohan Krishna</h1>
     <nav>
-        <a href="practice versison.html"><img src="https://png.pngtree.com/thumb_back/fh260/background/20220502/pngtree-sticky-note-about-me-concept-question-purpose-me-photo-image_17615398.jpg" class="about_imag" alt="About me"></imag></a>
-        <a href="project.html"><img src="https://images.unsplash.com/photo-1572177812156-58036aae439c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvamVjdHxlbnwwfHwwfHx8MA%3D%3D" class="project_imag"alt="Projects"></a>
-        <a href="ko.html"><img src="https://static8.depositphotos.com/1011183/958/i/450/depositphotos_9585540-stock-photo-self-improvement.jpg" class="skill_imag" alt="Skills"></a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="buttons">
-        <button class="ba">About</button>
-        <button class="bs">Skills</button>
-        <button class="bp">Projects</button>
+  </div>
+</header>
+
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am pursuing B.Tech in Artificial Intelligence & Data Science at Vignan’s Institute of Information and Technology. 
+      I specialize in Python, Java, C, Web Development (HTML, CSS), and MySQL. My focus areas are AI, Web Development, and Quantum Computing.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>TechVeda - Ayurvedic Predictor</h3>
+        <p>
+          An AI project that bridges traditional Ayurvedic medicine with modern technology using Random Forest and Decision Tree models.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Web Scraping Application</h3>
+        <p>
+          Built during my internship at Symbiosis. It automates extraction of specific data from HTML files to simplify web scraping.
+        </p>
+      </div>
     </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">Python</div>
+      <div class="card">Java</div>
+      <div class="card">C</div>
+      <div class="card">HTML5 & CSS3</div>
+      <div class="card">MySQL</div>
+      <div class="card">Communication Skills</div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="MY RESUME..pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:mohankrish110077@gmail.com">mohankrish110077@gmail.com</a></p>
+    <p>📞 Phone: 9100336743</p>
+    <p>📍 Location: Visakhapatnam, India</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ommi Mohan Krishna. All rights reserved.</p>
+  </footer>
 </body>
 </html>
